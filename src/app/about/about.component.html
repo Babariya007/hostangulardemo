@@ -1,0 +1,100 @@
+<div class="jumbotron">
+    <h1 class="display-4">About Fill Details<span style="font-family: Cambria"> {{ contact.name }} </span></h1>
+    <table>
+      <tr>
+        <td>
+          Enter Name 
+        </td>
+        <td>: </td>
+        <td>
+          <input type="text" [(ngModel)]="contact.name">
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Enter Address 
+        </td>
+        <td>: </td>
+        <td>
+          <input type="text" [(ngModel)]="contact.address" (input)="changName($event)">
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Enter Mobile No 
+        </td>
+        <td>: </td>
+        <td>
+          <input type="text" [(ngModel)]="contact.mobileno">
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Enter Email-ID 
+        </td>
+        <td>: </td>
+        <td>
+          <input type="text" [(ngModel)]="contact.email">
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Enter City 
+        </td>
+        <td>: </td>
+        <td>
+          <input type="text" [(ngModel)]="contact.city">
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Enter State 
+        </td>
+        <td>: </td>
+        <td>
+          <input type="text" [(ngModel)]="contact.state">
+        </td>
+      </tr>
+      <br>
+      <input type="button" class="btn btn-primary" value="Submit" [disabled]="isDisable" />
+    </table>
+  </div>
+  <div>
+    <table [style.border]="bordercolor">
+      <tr>
+        <td>Name </td>
+        <td>: </td>
+        <td>{{ contact.name }}</td>
+      </tr>
+      <tr>
+        <td>Address </td>
+        <td>: </td>
+        <td>{{ contact.address }}</td>
+      </tr>
+      <tr>
+        <td>Mobile No </td>
+        <td>: </td>
+        <td>{{ contact.mobileno }}</td>
+      </tr>
+      <tr>
+        <td>Email ID </td>
+        <td>: </td>
+        <td>{{ contact.email }}</td>
+      </tr>
+      <tr>
+        <td>City </td>
+        <td>: </td>
+        <td>{{ contact.city }}</td>
+      </tr>
+      <tr>
+        <td>State </td>
+        <td>: </td>
+        <td>{{ contact.state }}</td>
+      </tr>
+    </table>
+  </div>

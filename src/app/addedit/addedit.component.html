@@ -1,0 +1,21 @@
+<h1 style="text-align: center;">Student Details Crude Oprection</h1>
+<br>
+<table>
+    <tr>
+        <td>Student Name </td><td>: </td>
+        <td><input type="text" [(ngModel)]="StudentName" /></td>
+        <td>Roll no </td><td>: </td>
+        <td><input type="text" [(ngModel)]="rollnumber" /></td>
+        <td><input type="button" (click)="AddStudent()" class="btn btn-primary" value="Add Student" *ngIf="selectedStudent===null" /></td>
+        <td><input type="button" (click)="EditStudent()" class="btn btn-primary" value="Edit Student" *ngIf="selectedStudent!==null"/></td>
+    </tr>
+</table>
+
+<table class="table table-bordred">
+    <tr *ngFor="let stu of StudentArray; let i = index">
+        <td>{{ stu.name }}</td>
+        <td>{{ stu.rollno }}</td>
+        <td><input type="button" (click)="selectStudent(i)" class="btn btn-warning" value="Edit" /></td>
+        <td><input type="button" (click)="deleteStudent(i)" class="btn btn-danger" value="Delete" /></td>
+    </tr>
+</table>

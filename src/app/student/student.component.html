@@ -1,0 +1,12 @@
+<h1 style="text-align: center;">Roll No Only List</h1>
+<br>
+<div>
+    <input type="text" (input)="checkforEmpty($event)" [(ngModel)]="tempStudent" /> &nbsp;&nbsp;&nbsp;
+    <input type="button" [disabled]="isDisable" (click)="addstudent()" class="btn btn-primary" value="Add Student" />
+</div>
+
+<div>
+    <ul>
+        <li *ngFor="let stu of Student" >{{ stu }}</li>
+    </ul>
+</div>
